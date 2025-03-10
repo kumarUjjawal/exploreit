@@ -1,5 +1,3 @@
-
-import Image from "next/image";
 import { FaGlobe, FaTag, FaUserFriends } from "react-icons/fa";
 
 const FeatureSection = () => {
