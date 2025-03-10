@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FeatureSection from "./components/FeatureSection";
 
 export default function Home() {
   return (
@@ -16,10 +17,10 @@ export default function Home() {
         />
 
         {/* Overlay for better readability */}
-        <div className="absolute inset-0 bg-black/40 -z-10" />
+        <div className="absolute inset-0 bg-black/40 -z-9" />
 
         {/* Title & Search */}
-        <h1 className="text-4xl font-bold">Find Next Place To Visit</h1>
+        <h1 className="text-6xl font-bold">Find Next Place To Visit</h1>
         <p className="mt-2 text-lg">Discover amazing places at exclusive deals</p>
 
         {/* Search Bar */}
@@ -33,10 +34,11 @@ export default function Home() {
             Search
           </button>
         </div>
+        <FeatureSection />
       </section>
 
       {/* Popular Destinations */}
-      <section className="container mx-auto py-12">
+      <section className="container mx-auto py-12 mt-25">
         <h2 className="text-3xl font-semibold text-center">Popular Destinations</h2>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
           {["Mysore", "Jaipur", "Gangtok", "Kashmir"].map((city, index) => (
