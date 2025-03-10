@@ -1,5 +1,7 @@
 import Image from "next/image";
 import FeatureSection from "./components/FeatureSection";
+import Testimonials from "./components/Testimonials";
+import LocalExpertSection from "./components/LocalExpertSection";
 
 export default function Home() {
   return (
@@ -101,6 +103,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <Testimonials />
+      <LocalExpertSection />
     </div>
   );
 }
