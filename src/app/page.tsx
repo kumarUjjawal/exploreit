@@ -21,7 +21,7 @@ export default function Home() {
 
         {/* Title & Search */}
         <h1 className="text-6xl font-bold">Find Next Place To Visit</h1>
-        <p className="mt-2 text-lg">Discover amazing places at exclusive deals</p>
+        <p className="mt-2 text-2xl font-bold">Discover amazing places at exclusive deals</p>
 
         {/* Search Bar */}
         <div className="mt-6 w-full max-w-3xl relative">
@@ -38,9 +38,10 @@ export default function Home() {
       </section>
 
       {/* Popular Destinations */}
-      <section className="container mx-auto py-12 mt-25">
-        <h2 className="text-3xl font-semibold text-center">Popular Destinations</h2>
-        <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+      <section className="container mx-auto py-12 mt-25 max-w-screen-xl px-6 lg:px-10">
+        <h2 className="text-4xl font-bold text-center">Popular Destinations</h2>
+        <h3 className="text-xl font-normal text-center text-[#5C949A]">View All Deistinations</h3>
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {["Mysore", "Jaipur", "Gangtok", "Kashmir"].map((city, index) => (
             <div key={index} className="relative h-60 bg-gray-200 rounded-lg shadow-lg flex items-end p-4 bg-cover bg-center"
               style={{ backgroundImage: `url('/images/${city.toLowerCase()}.png')` }}>
@@ -51,8 +52,9 @@ export default function Home() {
       </section>
 
       {/* Popular Tours */}
-      <section className="container mx-auto py-12">
-        <h2 className="text-3xl font-semibold text-center">Popular Tours</h2>
+      <section className="container mx-auto py-12 mt-25 max-w-screen-xl px-6 lg:px-10">
+        <h2 className="text-4xl font-bold text-center">Popular Tours</h2>
+        <h3 className="text-xl font-normal text-center text-[#5C949A]">View All Deistinations</h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           {["Shillong", "Shimla", "Manali"].map((tour, index) => (
             <div key={index} className="rounded-lg shadow-lg p-4 bg-white">
@@ -63,9 +65,32 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* Discount Banner Wrapp6">
+        {/* Discount Banner */}
+      <section className="container mx-auto flex flex-col md:flex-row items-center bg-[#5C949A] max-w-screen-xl rounded-lg overflow-hidden min-h-[200px] md:min-h-[200px] lg:min-h-[250px]">
+        {/* Left Section - Text */}
+        <div className="w-full md:w-1/2 text-white text-center p-6 md:p-8 flex flex-col justify-center">
+          <h3 className="text-lg font-light">Enjoy Summer Deals</h3>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2">Up to 40% Discount</h2>
+          <button className="mt-4 px-6 py-3 bg-[#0F3E3E] text-white font-semibold rounded-md shadow-md hover:bg-[#092E2E]">
+            LEARN MORE
+          </button>
+        </div>
+
+        {/* Right Section - Image */}
+        <div className="w-full md:w-1/2 h-full flex">
+          <img
+            src="/images/desert-camel.png"
+            alt="Camel Safari"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
       {/* Our Recomended */}
-      <section className="container mx-auto py-12">
-        <h2 className="text-3xl font-semibold text-center">Our Recomended</h2>
+      <section className="container mx-auto py-12 mt-10 max-w-screen-xl px-6 lg:px-10">
+        <h2 className="text-4xl font-bold text-center">Our Recomended</h2>
+        <h3 className="text-xl font-normal text-center text-[#5C949A]">View All Deistinations</h3>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           {["Shillong", "Shimla", "Manali"].map((tour, index) => (
             <div key={index} className="rounded-lg shadow-lg p-4 bg-white">
