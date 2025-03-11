@@ -1,9 +1,15 @@
+"use client"
 import Image from "next/image";
 import FeatureSection from "./components/FeatureSection";
 import Testimonials from "./components/Testimonials";
 import LocalExpertSection from "./components/LocalExpertSection";
-
+import { useRouter } from "next/navigation";
 export default function Home() {
+  const router = useRouter();
+
+  const handleRoute = () => {
+    router.push('/destinations');
+  }
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -46,7 +52,9 @@ export default function Home() {
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
           {["Mysore", "Jaipur", "Gangtok", "Kashmir"].map((city, index) => (
             <div key={index} className="relative h-60 bg-gray-200 rounded-lg shadow-lg flex items-end p-4 bg-cover bg-center"
-              style={{ backgroundImage: `url('/images/${city.toLowerCase()}.png')` }}>
+              style={{ backgroundImage: `url('/images/${city.toLowerCase()}.png')` }}
+              onClick={handleRoute}
+            >
               <h3 className="text-white font-bold text-xl">{city}</h3>
             </div>
           ))}
@@ -70,7 +78,7 @@ export default function Home() {
 
       {/* Discount Banner Wrapp6">
         {/* Discount Banner */}
-      <section className="container mx-auto flex flex-col md:flex-row items-center bg-[#5C949A] max-w-screen-xl rounded-lg overflow-hidden min-h-[200px] md:min-h-[200px] lg:min-h-[250px]">
+      <section className="container mx-auto flex flex-col md:flex-row items-center bg-[#5C949A] max-w-screen-xl rounded-lg overflow-hidden min-h-[200px] md:min-h-[200px] lg:min-h-[250px] px-8 lg:px-16">
         {/* Left Section - Text */}
         <div className="w-full md:w-1/2 text-white text-center p-6 md:p-8 flex flex-col justify-center">
           <h3 className="text-lg font-light">Enjoy Summer Deals</h3>
